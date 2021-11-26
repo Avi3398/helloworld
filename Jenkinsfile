@@ -17,14 +17,7 @@ pipeline {
                 }
                 stage ("test") {
                         steps {
-                                script {
-                                try {
                                 println "this is for test"
-                                }
-                                catch(Exception e) {
-                                        println "there is a issue in test"
-                                }
-                         }
                           } 
                 }
                 stage ("deploy") {
