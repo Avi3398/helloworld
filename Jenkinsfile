@@ -30,7 +30,8 @@ pipeline {
                                  else if ( "${git_branch}" == "develop" )
                                 {
                                         println "this is develop"
-                                } else if ( "${git_branch}" == "INT" )
+                                }
+                                        else if ( "${git_branch}" == "INT" )
                                 {
                                         println "this is INT"
                                 }
