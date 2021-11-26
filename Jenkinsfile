@@ -23,14 +23,14 @@ pipeline {
                 stage ("deploy") {
                         steps {
                                 script {
-                                if ( "${git_branch}" == "master")
+                                if ( "${git_branch}" == "master" )
                                 {
                                         println "this is master"
                                 }
-                                 else if ( "${git_branch}" == "develop")
+                                 else if ( "${git_branch}" == "develop" )
                                 {
                                         println "this is develop"
-                                } else if ( "${git_branch}" == "INT")
+                                } else if ( "${git_branch}" == "INT" )
                                 {
                                         println "this is INT"
                                 }
