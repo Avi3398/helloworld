@@ -42,7 +42,7 @@ pipeline {
                                 }
                                  else
                                 {
-                                        println "this is wrong"
+                                        println "this is wrong statement"
                                 }
                         }
                         }
