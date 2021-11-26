@@ -19,7 +19,6 @@ pipeline {
                                 script {
                                 try {
                                 println "this is for test"
-                                ptintln "${pipeline_var}"
                                 }
                                 catch(Exception e) {
                                         println "there is a issue in test"
