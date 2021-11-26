@@ -1,3 +1,4 @@
+def git_branch = ""
 pipeline {
         agent any 
         parameters{
