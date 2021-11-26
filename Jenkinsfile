@@ -2,7 +2,7 @@ def git_branch = ""
 pipeline {
         agent any 
         parameters{
-                choice (name: "git_branch", choices:["master","devolop","INT"])
+                choice (name: 'git_branch', choices:["master","devolop","INT"])
         }
         stages {
                 stage ("clone") {
