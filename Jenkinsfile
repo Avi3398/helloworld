@@ -1,6 +1,6 @@
 def git_branch = ""
 pipeline {
-        agent any 
+        agent {label 'applogin_slave'} 
         parameters{
                 choice (name: 'git_branch', choices:["master","devolop","INT"])
         }
