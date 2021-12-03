@@ -1,7 +1,8 @@
+def git_branch = ""
 pipeline {
-        agent any 
+        agent {label 'helloworld_slave'} 
         parameters{
-                choice (name: "git_branch", choices:["master","devolop","INT"])
+                choice (name: 'git_branch', choices:["master","devolop","INT"])
         }
         stages {
                 stage ("clone") {
@@ -16,33 +17,27 @@ pipeline {
                 }
                 stage ("test") {
                         steps {
-                                script {
-                                try {
                                 println "this is for test"
-                                }
-                                catch(Exception e) {
-                                        println "there is a issue in test"
-                                }
-                         }
                           } 
                 }
                 stage ("deploy") {
                         steps {
                                 script {
-                                if ( "${git_branch}" == "master")
+                                if ( "${git_branch}" == "master" )
                                 {
                                         println "this is master"
                                 }
-                                 else if ( "${git_branch}" == "develop")
+                                 else if ( "${git_branch}" == "develop" )
                                 {
                                         println "this is develop"
-                                } else if ( "${git_branch}" == "INT")
+                                }
+                                        else if ( "${git_branch}" == "INT" )
                                 {
                                         println "this is INT"
                                 }
                                  else
                                 {
-                                        println "this is wrong"
+                                        println "this is wrong statement"
                                 }
                         }
                         }
